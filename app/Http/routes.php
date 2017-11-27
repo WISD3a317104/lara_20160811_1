@@ -10,9 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/',function(){
+/*Route::get('/',function(){
     return view('welcome');
-});
+});*/
 /*Route::get('/', function () {
     return view('welcome');
 });
@@ -25,7 +25,7 @@ Route::get('/',function(){
 }]);
 Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
     return view('welcome');
-}]);*/
+}]);
 Route::get('dashboard',function(){
     return 'dashboard';
 });
@@ -34,3 +34,7 @@ Route::group(['prefix'=>'admin'],function(){
         return  'admindashboard';
     });
 });
+
+*/
+Route::get('/',['as'=>'home.index','uses'=>'HomeController@index']);
+
